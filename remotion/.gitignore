@@ -1,0 +1,5 @@
+node_modules/
+whisper/
+out/
+.DS_Store
+*.log
