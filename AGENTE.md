@@ -18,10 +18,11 @@ para que Luis la apruebe desde su celular. **Nunca publiques nada directamente.*
 
 ## Paso a paso
 1. **Qué semana toca.** Con Metricool (`getScheduledPosts`, blogId `3941626`, zona `America/Lima`) mira los posts
-   programados de los próximos 30 días. Busca el último post cuyo texto diga «El Dorado». La semana a preparar es de
-   **lunes a domingo, empezando el primer lunes DESPUÉS de ese último post**. Si ese lunes está a más de 14 días de hoy,
-   no hagas nada (ya hay contenido de sobra) y termina diciendo eso. Numera la semana siguiendo `datos/historial.md`
-   (la próxima es la 3, luego la 4…). Si ya existe `salidas/semana-NN/`, no la repitas.
+   programados (incluidos borradores) de los próximos 45 días. Busca el último post cuyo texto diga «El Dorado»
+   (las historias no tienen texto: cuenta también las historias de Facebook programadas el mismo día que un post de
+   El Dorado). La semana nueva son **7 días seguidos que empiezan el día SIGUIENTE a ese último post**. Si ese primer día
+   está a más de 21 días de hoy, no hagas nada (ya hay contenido de sobra) y termina diciendo eso. Numera la semana
+   siguiendo `datos/historial.md` (la próxima es la 3, luego la 4…). Si ya existe `salidas/semana-NN/`, no la repitas.
 2. **Ideas.** Lee `datos/historial.md` y los borradores de `datos/` para NO repetir temas. Inventa 3 reels,
    3 carruseles y 3 historias nuevos, variados (preguntas, beneficios, recorridos, comparaciones, educativos sobre
    comprar un terreno seguro, avance de obra). Escribe el plan en `salidas/semana-NN/LEEME.md`.
@@ -45,7 +46,7 @@ para que Luis la apruebe desde su celular. **Nunca publiques nada directamente.*
    - Reels → facebook (REEL, con title), tiktok (isAigc: false), youtube (short, madeForKids: false, título, tags).
    - Carruseles → facebook (POST) y tiktok (autoAddMusic: true).
    - Historias en video → facebook (STORY), sin texto.
-   - Calendario: 1 pieza por día de lunes a domingo, alternando reel/carrusel, y las 2 historias de video a las 18:00
+   - Calendario: 1 pieza por día durante los 7 días, alternando reel/carrusel, y las 2 historias de video a las 18:00
      de días con carrusel. Horas 10:00, 12:00 o 18:00 sin chocar con posts existentes.
    - Texto de cada post: gancho + datos aprobados + «Escríbenos al WhatsApp 982 825 054.» + hashtags
      `#PuertoMaldonado #Lotes #MadreDeDios #GrupoVivencia #ElDorado`. Si hay renders: «(Imágenes referenciales)».
