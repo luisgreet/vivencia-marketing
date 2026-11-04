@@ -14,6 +14,11 @@ Sirve para no repetir temas. El agente semanal agrega aquí cada semana que prep
 - Carrusel 4 «Preguntas frecuentes» · Carrusel 5 «Hoy y así será» · Carrusel 6 «Antes de comprar un lote, revisa esto».
 - Historias: quiz de la inicial, avance de obra, caja de preguntas.
 
+## Semana 3 (17–23 nov 2026) — preparada, BORRADOR en Metricool (falta aprobación de Luis)
+- Reel 7 «Empieza con S/ 5,000» · Reel 8 «¿Mito o verdad?» (4 mitos) · Reel 9 «Imagina tus domingos» (renders de parrillas, infantil, deportivo).
+- Carrusel 7 «El Dorado desde el aire» (fotos reales de dron) · Carrusel 8 «¿Cuál es tu espacio favorito?» · Carrusel 9 «Antes de elegir tu lote, compara».
+- Historias: «Desde el aire» (video), «Imagina tus domingos» (video), encuesta «¿Para qué quieres tu lote?» (lámina, Luis la sube a mano).
+
 ## Horarios que ya usa Luis (no chocar)
 Luis tiene su propia serie educativa programada en Metricool (textos sobre terrenos, sin «El Dorado»).
 Antes de programar, revisa siempre los posts ya programados y no pongas dos publicaciones a la misma hora.
