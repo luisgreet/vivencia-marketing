@@ -1,7 +1,7 @@
 import React from 'react';
-import {AbsoluteFill, Img, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Img, interpolate, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {AZUL, AZUL_OSCURO, CREMA, DATOS, DORADO, Etiqueta, FUENTE, Logo, Musica, Referencial, useEntrada, VideoHorizontal} from './marca';
-import {CierreCarrusel, CierreReel, DronVertical, Pie, Texto} from './Semana';
+import {CierreCarrusel, CierreReel, DronVertical, Pie, Sub, Subtitulos, Texto} from './Semana';
 
 const T = (s: number) => Math.round(s * 30);
 
@@ -35,7 +35,8 @@ const Sombra = ({a = 0.7, b = 0.8}: {a?: number; b?: number}) => (
 );
 
 /* ───────────── REEL 7 — «Empieza con S/ 5,000» ───────────── */
-export const DUR_REEL7 = T(21);
+export const DUR_REEL7 = T(17.5);
+const SUBS7: Sub[] = [[0.07, 2.05, '¿Cuánto necesitas para empezar?'], [2.05, 4.04, 'En El Dorado, tu inicial es de S/ 5,000'], [4.04, 6.8, 'y tienes hasta 3 años para pagar tu lote, sin intereses.'], [6.8, 8.95, 'Lotes desde S/ 35,000'], [8.95, 11.36, 'en Chorrillos km 5, Puerto Maldonado.'], [11.36, 13.26, 'Escríbenos al WhatsApp'], [13.26, 16.0, '982 825 054']];
 const Cifra: React.FC<{pre: string; grande: string; post?: string}> = ({pre, grande, post}) => (
 	<AbsoluteFill style={{justifyContent: 'center', padding: '0 70px', textAlign: 'center'}}>
 		<Texto size={64} peso={700} color={CREMA}>{pre}</Texto>
@@ -45,32 +46,34 @@ const Cifra: React.FC<{pre: string; grande: string; post?: string}> = ({pre, gra
 );
 export const Reel7: React.FC = () => (
 	<AbsoluteFill style={{background: 'black'}}>
-		<Musica volumen={0.6} />
+		<Musica volumen={0.16} volumenFinal={0.5} desde={T(16)} />
+		<Audio src={staticFile('voz-reel-7.mp3')} />
 		<Tomas
 			tomas={[
-				[0, 3.5, <><DronVertical src="d115.mp4" oscuro /><AbsoluteFill style={{justifyContent: 'center', padding: '0 80px'}}><Texto size={46} color={DORADO} style={{letterSpacing: 4}}>EL DORADO · PUERTO MALDONADO</Texto><Texto size={124} retraso={4} style={{marginTop: 24}}>¿Cuánto necesitas para empezar?</Texto></AbsoluteFill></>],
-				[3.5, 8, <><DronVertical src="d117.mp4" oscuro /><Cifra pre="Tu inicial es de" grande={DATOS.inicial} /></>],
-				[8, 12.5, <><DronVertical src="dron.mp4" desde={T(14)} oscuro /><Cifra pre="Y tienes" grande="hasta 3 años" post="para pagar tu lote" /></>],
-				[12.5, 16.5, <><DronVertical src="d117.mp4" desde={T(4)} oscuro /><Cifra pre="Lotes desde" grande={DATOS.precio} post={DATOS.ubicacion} /></>],
-				[16.5, 21, <CierreReel />],
+				[0, 2.05, <><DronVertical src="d115.mp4" oscuro /><AbsoluteFill style={{justifyContent: 'center', padding: '0 80px'}}><Texto size={46} color={DORADO} style={{letterSpacing: 4}}>EL DORADO · PUERTO MALDONADO</Texto><Texto size={124} retraso={3} style={{marginTop: 24}}>¿Cuánto necesitas para empezar?</Texto></AbsoluteFill></>],
+				[2.05, 4.04, <><DronVertical src="d117.mp4" oscuro /><Cifra pre="Tu inicial es de" grande={DATOS.inicial} /></>],
+				[4.04, 6.8, <><DronVertical src="dron.mp4" desde={T(14)} oscuro /><Cifra pre="Y tienes" grande="hasta 3 años" post="sin intereses" /></>],
+				[6.8, 11.36, <><DronVertical src="d117.mp4" desde={T(4)} oscuro /><Cifra pre="Lotes desde" grande={DATOS.precio} post={DATOS.ubicacion} /></>],
+				[11.36, 17.5, <CierreReel />],
 			]}
 		/>
+		<Subtitulos subs={SUBS7} />
 	</AbsoluteFill>
 );
 
 /* ───────────── REEL 8 — «¿Mito o verdad?» ───────────── */
 const MITOS = [
 	{mito: 'Necesito mucho dinero para empezar', verdad: `Tu inicial es de ${DATOS.inicial.replace(" ", "\u00a0")}`, bg: 'd115.mp4', desde: 0},
-	{mito: 'Tengo que pagar todo de golpe', verdad: 'Tienes hasta 3 años para pagar', bg: 'dron.mp4', desde: T(14)},
+	{mito: 'Tengo que pagar todo de golpe', verdad: 'Tienes hasta 3 años para pagar, sin intereses', bg: 'dron.mp4', desde: T(14)},
 	{mito: 'Es solo un terreno vacío', verdad: 'Se entrega con agua, luz, parques, áreas recreativas y pistas mejoradas', bg: 'render_1_8_parque.jpg', desde: 0, ref: true},
 	{mito: 'No me dan documentos', verdad: 'Tu lote se entrega con título de propiedad', bg: 'd117.mp4', desde: 0},
 ];
-const Mito: React.FC<{i: number}> = ({i}) => {
+const Mito: React.FC<{i: number; revela?: number}> = ({i, revela = T(2)}) => {
 	const m = MITOS[i];
 	const f = useCurrentFrame();
-	const verdad = f >= T(2);
+	const verdad = f >= revela;
 	const larga = m.verdad.length > 40;
-	const entradaVerdad = useEntrada(T(2));
+	const entradaVerdad = useEntrada(revela);
 	return (
 		<AbsoluteFill>
 			<Media src={m.bg} desde={m.desde} zoom={!m.bg.endsWith('.mp4')} pos="40% center" />
@@ -91,23 +94,26 @@ const Mito: React.FC<{i: number}> = ({i}) => {
 		</AbsoluteFill>
 	);
 };
-export const DUR_REEL8 = T(23);
+export const DUR_REEL8 = T(31);
+// [inicio, revela verdad, fin] según voz-reel-8.mp3
+const TIEMPOS8: [number, number, number][] = [[1.21, 3.72, 6.2], [6.2, 8.78, 12.28], [12.28, 14.4, 18.66], [18.66, 21.2, 24.09]];
 export const Reel8: React.FC = () => (
 	<AbsoluteFill style={{background: 'black'}}>
-		<Musica volumen={0.6} />
-		<Sequence durationInFrames={T(2.5)}>
+		<Musica volumen={0.16} volumenFinal={0.5} desde={T(29.3)} />
+		<Audio src={staticFile('voz-reel-8.mp3')} />
+		<Sequence durationInFrames={T(1.21)}>
 			<DronVertical src="d117.mp4" desde={T(5)} oscuro />
 			<AbsoluteFill style={{justifyContent: 'center', padding: '0 80px'}}>
 				<Texto size={46} color={DORADO} style={{letterSpacing: 4}}>EL DORADO</Texto>
-				<Texto size={150} retraso={3} style={{marginTop: 20}}>¿Mito o verdad?</Texto>
+				<Texto size={150} retraso={2} style={{marginTop: 20}}>¿Mito o verdad?</Texto>
 			</AbsoluteFill>
 		</Sequence>
-		{MITOS.map((_, i) => (
-			<Sequence key={i} from={T(2.5 + i * 4.2)} durationInFrames={T(4.2)}>
-				<Mito i={i} />
+		{TIEMPOS8.map(([a, r, b], i) => (
+			<Sequence key={i} from={T(a)} durationInFrames={T(b) - T(a)}>
+				<Mito i={i} revela={T(r) - T(a)} />
 			</Sequence>
 		))}
-		<Sequence from={T(2.5 + 4 * 4.2 - 0.3)}>
+		<Sequence from={T(24.09)}>
 			<CierreReel />
 		</Sequence>
 	</AbsoluteFill>
@@ -119,11 +125,14 @@ const DOMINGOS = [
 	{clip: 'clip_infantil.mp4', t: 'Los niños, jugando'},
 	{clip: 'clip_deportivo.mp4', t: 'Deporte al aire libre'},
 ];
-export const DUR_REEL9 = T(21);
+export const DUR_REEL9 = T(22);
+const T9: [number, number][] = [[2.27, 5.44], [5.44, 7.7], [7.7, 9.4]];
+const SUBS9: Sub[] = [[0.04, 2.27, 'Imagina tus domingos en El Dorado'], [2.27, 5.44, 'Una parrillada en familia'], [5.44, 7.7, 'Los niños, jugando'], [7.7, 8.64, 'Deporte al aire libre'], [8.64, 13.26, 'Parques y áreas recreativas en tu nuevo barrio'], [13.26, 16.55, 'Lotes desde S/ 35,000'], [16.55, 18.24, 'Escríbenos al WhatsApp'], [18.24, 21.0, '982 825 054']];
 export const Reel9: React.FC = () => (
 	<AbsoluteFill style={{background: 'black'}}>
-		<Musica volumen={0.6} />
-		<Sequence durationInFrames={T(3)}>
+		<Musica volumen={0.16} volumenFinal={0.5} desde={T(21)} />
+		<Audio src={staticFile('voz-reel-9.mp3')} />
+		<Sequence durationInFrames={T(2.27)}>
 			<DronVertical src="dron.mp4" desde={T(2)} oscuro />
 			<AbsoluteFill style={{justifyContent: 'center', padding: '0 80px'}}>
 				<Texto size={46} color={DORADO} style={{letterSpacing: 4}}>EL DORADO · PUERTO MALDONADO</Texto>
@@ -131,7 +140,7 @@ export const Reel9: React.FC = () => (
 			</AbsoluteFill>
 		</Sequence>
 		{DOMINGOS.map((d, i) => (
-			<Sequence key={d.t} from={T(3 + i * 4)} durationInFrames={T(4)}>
+			<Sequence key={d.t} from={T(T9[i][0])} durationInFrames={T(T9[i][1]) - T(T9[i][0])}>
 				<VideoHorizontal src={d.clip} top={560} />
 				<AbsoluteFill style={{padding: '1240px 80px 0'}}>
 					<Texto size={34} color={DORADO} retraso={2} style={{letterSpacing: 5}}>0{i + 1} / 0{DOMINGOS.length}</Texto>
@@ -142,7 +151,7 @@ export const Reel9: React.FC = () => (
 				</AbsoluteFill>
 			</Sequence>
 		))}
-		<Sequence from={T(15)} durationInFrames={T(2)}>
+		<Sequence from={T(9.4)} durationInFrames={T(13.26) - T(9.4)}>
 			<AbsoluteFill>
 				<Media src="render_1_2_vista.jpg" zoom />
 				<Sombra a={0.6} b={0.85} />
@@ -153,9 +162,10 @@ export const Reel9: React.FC = () => (
 				</AbsoluteFill>
 			</AbsoluteFill>
 		</Sequence>
-		<Sequence from={T(17)}>
+		<Sequence from={T(13.26)}>
 			<CierreReel />
 		</Sequence>
+		<Subtitulos subs={SUBS9} />
 	</AbsoluteFill>
 );
 

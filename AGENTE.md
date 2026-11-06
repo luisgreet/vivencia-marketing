@@ -42,7 +42,7 @@ para que Luis la apruebe desde su celular. **Nunca publiques nada directamente.*
    - Revisa tú mismo varios cuadros de cada pieza (renderiza stills y míralos): texto legible, nada cortado, datos
      correctos. Corrige antes de seguir.
 5. **Guardar.** Renderiza a `salidas/semana-NN/` con nombres claros (`reel-7-....mp4`, `carrusel-7-lamina-1.png`,
-   `historia-7-....mp4/png`). Videos con `--codec=h264 --crf=23` (que pesen menos de 40 MB). Haz commit y push a `main`.
+   `historia-7-....mp4/png`). Videos con `--codec=h264 --crf=23 --concurrency=2 --timeout=120000` (si no, los videos se cortan por tiempo; que pesen menos de 40 MB). Haz commit y push a `main`.
 6. **Programar como borrador.** Espera a que respondan las URLs públicas
    `https://raw.githubusercontent.com/luisgreet/vivencia-marketing/main/salidas/semana-NN/ARCHIVO` (prueba con curl).
    Crea en Metricool, con `createScheduledPost`, `draft: true`, `autoPublish: true`, `publicationDate` en

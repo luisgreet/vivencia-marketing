@@ -1,7 +1,7 @@
 import React from 'react';
-import {AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
+import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import {AZUL, AZUL_OSCURO, CREMA, DATOS, DORADO, Etiqueta, FUENTE, Logo, Musica, Referencial, useEntrada} from './marca';
-import {CierreCarrusel, CierreReel, Pie, Texto} from './Semana';
+import {CierreCarrusel, CierreReel, Pie, Sub, Subtitulos, Texto} from './Semana';
 
 const T = (s: number) => Math.round(s * 30);
 const B = (n: string) => `biblioteca/${n}.mp4`;
@@ -74,35 +74,40 @@ export const Reel10: React.FC = () => (
 );
 
 /* ───────── REEL 11 — «Elige tu lote» (visita al proyecto) ───────── */
-export const DUR_REEL11 = T(20.5);
+export const DUR_REEL11 = T(23);
+const SUBS11: Sub[] = [[0.19, 2.33, 'Elige tu lote en El Dorado.'], [2.33, 5.32, 'Lotes desde S/ 35,000,'], [5.32, 8.72, 'en Chorrillos km 5, Puerto Maldonado.'], [8.72, 11.96, 'Con una inicial de S/ 5,000.'], [11.96, 16.18, 'Y hasta 3 años para pagar, sin intereses.'], [16.18, 17.96, 'Escríbenos al WhatsApp'], [17.96, 21.3, '982 825 054']];
 export const Reel11: React.FC = () => (
 	<AbsoluteFill style={{background: 'black'}}>
-		<Musica volumen={0.6} />
+		<Musica volumen={0.16} volumenFinal={0.5} desde={T(21.3)} />
+		<Audio src={staticFile('voz-reel-11.mp3')} />
 		<Tomas
 			tomas={[
-				[0, 3.5, <><Clip src={B('visita_2136')} /><Portada pre="EL DORADO · PUERTO MALDONADO" t="Elige tu lote" /></>],
-				[3.5, 8.2, <><Clip src={B('visita_2152')} /><Cifra pre="Lotes desde" grande={DATOS.precio} post={DATOS.ubicacion} /></>],
-				[8.2, 10.1, <><Clip src={B('visita_2150')} /><Cifra pre="Inicial de" grande={DATOS.inicial} /></>],
-				[10.1, 11.7, <><Clip src={B('visita_2151')} /><Cifra pre="Inicial de" grande={DATOS.inicial} /></>],
-				[11.7, 16, <><Clip src={B('visita_2169')} /><Cifra pre="Y tienes" grande="hasta 3 años" post="para pagar" /></>],
-				[16, 20.5, <CierreReel />],
+				[0, 2.33, <><Clip src={B('visita_2136')} /><Portada pre="EL DORADO · PUERTO MALDONADO" t="Elige tu lote" /></>],
+				[2.33, 8.72, <><Clip src={B('visita_2152')} /><Cifra pre="Lotes desde" grande={DATOS.precio} post={DATOS.ubicacion} /></>],
+				[8.72, 10.4, <><Clip src={B('visita_2150')} /><Cifra pre="Inicial de" grande={DATOS.inicial} /></>],
+				[10.4, 11.96, <><Clip src={B('visita_2151')} /><Cifra pre="Inicial de" grande={DATOS.inicial} /></>],
+				[11.96, 16.18, <><Clip src={B('visita_2169')} /><Cifra pre="Y tienes" grande="hasta 3 años" post="sin intereses" /></>],
+				[16.18, 23, <CierreReel />],
 			]}
 		/>
+		<Subtitulos subs={SUBS11} />
 	</AbsoluteFill>
 );
 
 /* ───────── REEL 12 — «Mira cómo se trabaja» (obra real) ───────── */
-export const DUR_REEL12 = T(24);
+export const DUR_REEL12 = T(18.5);
+const SUBS12: Sub[] = [[0.4, 3.21, 'Así se trabaja hoy en El Dorado,'], [3.21, 6.13, 'maquinaria trabajando en el terreno,'], [6.13, 8.24, 'avanzan los trabajos'], [8.24, 11.74, 'y el vaciado de concreto de una plaza circular.'], [11.74, 13.72, 'Lotes desde S/ 35,000,'], [13.72, 15.4, 'escríbenos al WhatsApp'], [15.4, 17.6, '982 825 054']];
 export const Reel12: React.FC = () => (
 	<AbsoluteFill style={{background: 'black'}}>
-		<Musica volumen={0.6} />
+		<Musica volumen={0.16} volumenFinal={0.5} desde={T(17.6)} />
+		<Audio src={staticFile('voz-reel-12.mp3')} />
 		<Tomas
 			tomas={[
-				[0, 3.2, <><Clip src={B('obra_6592')} /><Portada pre="EL DORADO · OBRA REAL" t="Así se trabaja hoy" /></>],
-				[3.2, 8.6, <><Clip src={B('obra_6202')} /><Chip>01 / 03</Chip><Abajo t="Maquinaria en el terreno" /></>],
-				[8.6, 13.6, <><Clip src={B('obra_6419')} /><Chip>02 / 03</Chip><Abajo t="Trabajos en el terreno" /></>],
-				[13.6, 19.4, <><Clip src={B('obra_concreto')} /><Chip>03 / 03</Chip><Abajo t="Vaciado de concreto" sub="en una plaza circular" /></>],
-				[19.4, 24, <CierreReel />],
+				[0, 3.21, <><Clip src={B('obra_6592')} /><Portada pre="EL DORADO · OBRA REAL" t="Así se trabaja hoy" /></>],
+				[3.21, 6.13, <><Clip src={B('obra_6202')} /><Chip>01 / 03</Chip><Abajo t="Maquinaria en el terreno" /></>],
+				[6.13, 8.24, <><Clip src={B('obra_6419')} /><Chip>02 / 03</Chip><Abajo t="Trabajos en el terreno" /></>],
+				[8.24, 11.74, <><Clip src={B('obra_concreto')} /><Chip>03 / 03</Chip><Abajo t="Vaciado de concreto" sub="en una plaza circular" /></>],
+				[11.74, 18.5, <CierreReel />],
 			]}
 		/>
 	</AbsoluteFill>
