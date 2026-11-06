@@ -17,16 +17,16 @@ HORIZONTALES 16:9 → usar `VideoHorizontal`) · `render_*.jpg` (renders 1920×1
 | `luis_0096.mp4` | «Aquí en Puerto Maldonado quiero mostrarte el siguiente proyecto, El Dorado» | ✅ Sí |
 | `luis_0093.mp4` | «En este proyecto ya comenzamos con los avances de obra, parques» | ✅ Sí |
 | `luis_0095.mp4` | «Ya comenzamos con la construcción de este parque» | ✅ Sí |
-| `luis_0105.mp4` | «Ubicado en la zona de Chorrillos km 5, al costado del circuito de manejo» | ⚠ Pendiente (circuito de manejo) |
-| `luis_0107.mp4` | «A pasos de la vía principal» | ⚠ Pendiente |
-| `luis_0108.mp4` | «En una zona en constante crecimiento y desarrollo» | ⚠ Pendiente |
-| `luis_0110.mp4` | «Un proyecto dentro de la expansión urbana» | ⚠ Pendiente |
-| `luis_0111.mp4` | «Lotes con título de propiedad independizado, agua, luz en cada lote» | ⚠ Pendiente (independizado) |
-| `luis_0112.mp4` | «Te lo financiamos por tres años, cero intereses, con tan solo inicial de 5 mil soles» | ⚠ Pendiente (cero intereses) |
-| `luis_0113.mp4` | «Invierte en algo real que te dé confianza, seguridad y plusvalía, no promesas falsas» | ⚠ Pendiente |
-| `luis_0114.mp4` | «Descúbrelo tú mismo en una visita guiada o una reunión en mi oficina» | ⚠ Pendiente |
+| `luis_0105.mp4` | «Ubicado en la zona de Chorrillos km 5, al costado del circuito de manejo» | ✅ Sí |
+| `luis_0107.mp4` | «A pasos de la vía principal» | ✅ Sí |
+| `luis_0108.mp4` | «En una zona en constante crecimiento y desarrollo» | ✅ Sí |
+| `luis_0110.mp4` | «Un proyecto dentro de la expansión urbana» | ✅ Sí |
+| `luis_0111.mp4` | «Lotes con título de propiedad independizado, agua, luz en cada lote» | ✅ Sí |
+| `luis_0112.mp4` | «Te lo financiamos por tres años, cero intereses, con tan solo inicial de 5 mil soles» | ✅ Sí |
+| `luis_0113.mp4` | «Invierte en algo real que te dé confianza, seguridad y plusvalía, no promesas falsas» | ✅ Sí |
+| `luis_0114.mp4` | «Descúbrelo tú mismo en una visita guiada o una reunión en mi oficina» | ✅ Sí |
 
-⚠ = Luis aún no aprobó ese dato. Mientras siga ⚠ en esta tabla, usa ese clip **sin audio** (mudo, con música) y
+Todos aprobados por Luis el 05-nov-2026. (⚠ = Luis aún no aprobó ese dato.) Mientras siga ⚠ en esta tabla, usa ese clip **sin audio** (mudo, con música) y
 sin escribir esa frase. Si `datos/datos.md` ya incluye el dato, entonces sí puedes usar el audio.
 Para usar el audio de Luis: `<OffthreadVideo src=... />` sin `muted` y baja la música a 0.12.
 
