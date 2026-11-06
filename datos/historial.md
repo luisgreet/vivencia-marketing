@@ -19,6 +19,12 @@ Sirve para no repetir temas. El agente semanal agrega aquí cada semana que prep
 - Carrusel 7 «El Dorado desde el aire» (fotos reales de dron) · Carrusel 8 «¿Cuál es tu espacio favorito?» · Carrusel 9 «Antes de elegir tu lote, compara».
 - Historias: «Desde el aire» (video), «Imagina tus domingos» (video), encuesta «¿Para qué quieres tu lote?» (lámina, Luis la sube a mano).
 
+## Semana 4 (23–29 nov 2026) — preparada, BORRADOR en Metricool (falta aprobación de Luis)
+- Reel 10 «Conoce El Dorado con Luis» (voz real de Luis: luis_0096, 0093, 0095 + obra_6202) · Reel 11 «Elige tu lote» (visita_2136, 2152, 2150, 2151, 2169) · Reel 12 «Así se trabaja hoy» (obra_6592, 6202, 6419, concreto).
+- Carrusel 10 «Recorre El Dorado» (renders) · Carrusel 11 «Antes de ir a ver un terreno» (educativo) · Carrusel 12 «El Dorado en obra» (fotos reales de obra).
+- Historias: «Trabajando en El Dorado» (video, obra) · «Empieza con S/ 5,000» (video, visita) · encuesta «¿Qué quieres ver la próxima semana?» (lámina, Luis la sube a mano).
+- Material nuevo usado: luis_0093/0095/0096, obra_6202/6419/6592/concreto, visita_2136/2150/2151/2152/2169.
+
 ## Horarios que ya usa Luis (no chocar)
 Luis tiene su propia serie educativa programada en Metricool (textos sobre terrenos, sin «El Dorado»).
 Antes de programar, revisa siempre los posts ya programados y no pongas dos publicaciones a la misma hora.
