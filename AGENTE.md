@@ -30,9 +30,13 @@ para que Luis la apruebe desde su celular. **Nunca publiques nada directamente.*
    Linux, instala las librerías que pida (`apt-get install -y` …) y reintenta.
 4. **Hacer las piezas** con Remotion, reutilizando el estilo ya aprobado (`src/marca.tsx`, `src/Semana.tsx`,
    `src/Semana2.tsx`: colores azul/dorado/crema, letra Figtree, logo, cierre con WhatsApp). Crea `src/SemanaNN.tsx`
-   y regístralo en `src/index.tsx`. Material disponible en `public/`: renders `render_*.jpg`, clips de renders
+   y regístralo en `src/index.tsx`. **Lee `datos/biblioteca.md`**: ahí está TODO el material (clips de la Mac de Luis en
+   `public/biblioteca/`, incluida su voz real, y fotos/videos del Google Drive con su enlace de descarga). Cada semana
+   usa al menos 2 materiales que no se hayan usado antes (revisa `datos/historial.md`) y anota en el historial cuáles
+   usaste. Respeta las marcas ✅/⚠ de la biblioteca. Material base en `public/`: renders `render_*.jpg`, clips de renders
    `clip_*.mp4`, drones `dron.mp4`, `d115.mp4`, `d117.mp4`, obra real `obra_*.mp4`, música `musica.mp3`
-   (Mixkit, libre). **Sin voz** (no hay acceso a Higgsfield): reels con música + textos grandes en pantalla.
+   (Mixkit, libre). **Sin voz generada** (no hay acceso a Higgsfield): reels con música + textos grandes; o usa los clips ✅ de Luis
+   hablando con su audio real.
    - Reels 1080×1920, 15–25 s. Carruseles 1080×1350, 5–7 láminas PNG. Historias 1080×1920: **2 en video de 10 s**
      (se programan) y **1 lámina con espacio para sticker** (encuesta/quiz/preguntas; la sube Luis a mano).
    - Revisa tú mismo varios cuadros de cada pieza (renderiza stills y míralos): texto legible, nada cortado, datos
