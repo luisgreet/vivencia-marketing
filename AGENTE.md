@@ -50,6 +50,7 @@ para que Luis la apruebe desde su celular. **Nunca publiques nada directamente.*
    - Reels → facebook (REEL, con title), tiktok (isAigc: false), youtube (short, madeForKids: false, título, tags).
    - Carruseles → facebook (POST) y tiktok (autoAddMusic: true).
    - Historias en video → facebook (STORY), sin texto.
+   - **Carruseles en JPG** (TikTok rechaza PNG): convierte cada lámina a `.jpg` (calidad 90) y usa esas URLs en Metricool.
    - Calendario: 1 pieza por día durante los 7 días, alternando reel/carrusel, y las 2 historias de video a las 18:00
      de días con carrusel. Horas 10:00, 12:00 o 18:00 sin chocar con posts existentes.
    - Texto de cada post: gancho + datos aprobados + «Escríbenos al WhatsApp 982 825 054.» + hashtags
