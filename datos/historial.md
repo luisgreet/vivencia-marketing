@@ -25,6 +25,12 @@ Sirve para no repetir temas. El agente semanal agrega aquí cada semana que prep
 - Historias: «Trabajando en El Dorado» (video, obra) · «Empieza con S/ 5,000» (video, visita) · encuesta «¿Qué quieres ver la próxima semana?» (lámina, Luis la sube a mano).
 - Material nuevo usado: luis_0093/0095/0096, obra_6202/6419/6592/concreto, visita_2136/2150/2151/2152/2169.
 
+## Semana 5 (29 nov – 5 dic 2026) — preparada, BORRADOR en Metricool (falta aprobación de Luis)
+- Reel 13 «¿Dónde queda El Dorado?» (voz real de Luis: luis_0105, 0107, 0108, 0110) · Reel 14 «Tu lote, con todo» (d115 + luis_0111, 0112) · Reel 15 «Ven a conocerlo» (visita_2136/2152/2150 + luis_0114, +1000 familias).
+- Carrusel 13 «¿Dónde queda El Dorado?» (fotos de dron) · Carrusel 14 «Llegó la tercera etapa» · Carrusel 15 «Cómo agendar tu visita».
+- Historias: «Junto al circuito de manejo» (video, dron) · «Conócelo en persona» (video, visita) · encuesta «¿Cómo prefieres conocerlo?» (lámina, Luis la sube a mano).
+- Material nuevo usado: luis_0105/0107/0108/0110/0111/0112/0114, dron_1/14/22/28.
+
 ## Horarios que ya usa Luis (no chocar)
 Luis tiene su propia serie educativa programada en Metricool (textos sobre terrenos, sin «El Dorado»).
 Antes de programar, revisa siempre los posts ya programados y no pongas dos publicaciones a la misma hora.
