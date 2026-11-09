@@ -8,6 +8,7 @@ import {Carrusel2, Carrusel3, DUR_REEL2, DUR_REEL3, Historia1, Historia3, N_CARR
 
 import {Carrusel7, Carrusel8, Carrusel9, DUR_REEL7, DUR_REEL8, DUR_REEL9, Historia7, Historia8, Historia9, N_CARRUSEL7, N_CARRUSEL8, N_CARRUSEL9, Reel7, Reel8, Reel9} from './Semana3';
 import {Carrusel10, Carrusel11, Carrusel12, DUR_REEL10, DUR_REEL11, DUR_REEL12, Historia10, Historia11, Historia12, N_CARRUSEL10, N_CARRUSEL11, N_CARRUSEL12, Reel10, Reel11, Reel12} from './Semana4';
+import {Carrusel13, Carrusel14, Carrusel15, DUR_REEL13, DUR_REEL14, DUR_REEL15, Historia13, Historia14, Historia15, N_CARRUSEL13, N_CARRUSEL14, N_CARRUSEL15, Reel13, Reel14, Reel15} from './Semana5';
 
 const V = {fps: 30, width: 1080, height: 1920};
 const C = {fps: 30, width: 1080, height: 1350};
@@ -50,6 +51,15 @@ const Root: React.FC = () => (
 		<Composition id="Reel12" component={Reel12} durationInFrames={DUR_REEL12} {...V} />
 		<Composition id="Carrusel12" component={Carrusel12} durationInFrames={N_CARRUSEL12} {...C} />
 		<Composition id="Historia12" component={Historia12} durationInFrames={1} {...V} />
+		<Composition id="Reel13" component={Reel13} durationInFrames={DUR_REEL13} {...V} />
+		<Composition id="Carrusel13" component={Carrusel13} durationInFrames={N_CARRUSEL13} {...C} />
+		<Composition id="Historia13" component={Historia13} durationInFrames={300} {...V} />
+		<Composition id="Reel14" component={Reel14} durationInFrames={DUR_REEL14} {...V} />
+		<Composition id="Carrusel14" component={Carrusel14} durationInFrames={N_CARRUSEL14} {...C} />
+		<Composition id="Historia14" component={Historia14} durationInFrames={300} {...V} />
+		<Composition id="Reel15" component={Reel15} durationInFrames={DUR_REEL15} {...V} />
+		<Composition id="Carrusel15" component={Carrusel15} durationInFrames={N_CARRUSEL15} {...C} />
+		<Composition id="Historia15" component={Historia15} durationInFrames={1} {...V} />
 	</>
 );
 
