@@ -31,6 +31,12 @@ Sirve para no repetir temas. El agente semanal agrega aquí cada semana que prep
 - Historias: «Junto al circuito de manejo» (video, dron) · «Conócelo en persona» (video, visita) · encuesta «¿Cómo prefieres conocerlo?» (lámina, Luis la sube a mano).
 - Material nuevo usado: luis_0105/0107/0108/0110/0111/0112/0114, dron_1/14/22/28.
 
+## Semana 6 (5–11 dic 2026) — preparada, BORRADOR en Metricool (falta aprobación de Luis)
+- Reel 16 «Así se trabaja» (obra real) · Reel 17 «Para toda la familia» (renders) · Reel 18 «Pide el título de propiedad» (voz real de Luis: luis_0111).
+- Carrusel 16 «5 señales de un buen proyecto» · Carrusel 17 «4 planes para tu fin de semana» · Carrusel 18 «Así se trabajan las pistas» (fotos reales de obra).
+- Historias: «Pistas mejoradas» (video, obra) · «Para toda la familia» (video, renders) · quiz «¿Hasta cuántos años puedes pagar tu lote?» (lámina, Luis la sube a mano).
+- Material usado: obra_6309 (nuevo), obra_6591/6594/6593, d115/d117, luis_0111, clips de renders. Drive bloqueado (403) esta semana.
+
 ## Horarios que ya usa Luis (no chocar)
 Luis tiene su propia serie educativa programada en Metricool (textos sobre terrenos, sin «El Dorado»).
 Antes de programar, revisa siempre los posts ya programados y no pongas dos publicaciones a la misma hora.
