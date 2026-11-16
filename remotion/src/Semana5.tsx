@@ -7,14 +7,14 @@ const T = (s: number) => Math.round(s * 30);
 const B = (n: string) => `biblioteca/${n}.mp4`;
 
 // Clip vertical de la biblioteca (con o sin audio)
-const Clip: React.FC<{src: string; audio?: boolean; oscuro?: boolean}> = ({src, audio, oscuro = true}) => (
+export const Clip: React.FC<{src: string; audio?: boolean; oscuro?: boolean}> = ({src, audio, oscuro = true}) => (
 	<AbsoluteFill>
 		<OffthreadVideo src={staticFile(src)} muted={!audio} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
 		{oscuro ? <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(14,22,82,0.7) 0%, rgba(14,22,82,0.05) 38%, rgba(14,22,82,0.1) 55%, rgba(14,22,82,0.85) 100%)'}} /> : null}
 	</AbsoluteFill>
 );
 type Toma = [number, number, React.ReactNode];
-const Tomas: React.FC<{tomas: Toma[]}> = ({tomas}) => (
+export const Tomas: React.FC<{tomas: Toma[]}> = ({tomas}) => (
 	<>
 		{tomas.map(([a, b, n], i) => (
 			<Sequence key={i} from={T(a)} durationInFrames={T(b) - T(a)}>
@@ -23,20 +23,20 @@ const Tomas: React.FC<{tomas: Toma[]}> = ({tomas}) => (
 		))}
 	</>
 );
-const Chip: React.FC<{children: React.ReactNode; top?: number}> = ({children, top = 170}) => (
+export const Chip: React.FC<{children: React.ReactNode; top?: number}> = ({children, top = 170}) => (
 	<AbsoluteFill style={{alignItems: 'center', paddingTop: top}}>
 		<div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 32, letterSpacing: 4, color: AZUL_OSCURO, background: DORADO, padding: '12px 28px', borderRadius: 10}}>{children}</div>
 	</AbsoluteFill>
 );
 // Texto abajo (subtítulo / mensaje)
-const Abajo: React.FC<{pre?: string; t: string; size?: number; sub?: string; pad?: number}> = ({pre, t, size = 92, sub, pad = 300}) => (
+export const Abajo: React.FC<{pre?: string; t: string; size?: number; sub?: string; pad?: number}> = ({pre, t, size = 92, sub, pad = 300}) => (
 	<AbsoluteFill style={{justifyContent: 'flex-end', padding: `0 70px ${pad}px`}}>
 		{pre ? <Texto size={36} color={DORADO} style={{letterSpacing: 5, marginBottom: 14}}>{pre}</Texto> : null}
 		<Texto size={size} retraso={3}>{t}</Texto>
 		{sub ? <Texto size={44} peso={600} color={CREMA} retraso={8} style={{marginTop: 16}}>{sub}</Texto> : null}
 	</AbsoluteFill>
 );
-const Portada: React.FC<{pre: string; t: string}> = ({pre, t}) => (
+export const Portada: React.FC<{pre: string; t: string}> = ({pre, t}) => (
 	<AbsoluteFill style={{justifyContent: 'flex-end', padding: '0 80px 330px'}}>
 		<Texto size={46} color={DORADO} style={{letterSpacing: 4}}>{pre}</Texto>
 		<Texto size={128} retraso={4} style={{marginTop: 20}}>{t}</Texto>
@@ -50,13 +50,13 @@ const Cifra: React.FC<{pre: string; grande: string; post?: string}> = ({pre, gra
 	</AbsoluteFill>
 );
 // Subtítulo con lo que dice Luis (cita textual del clip)
-const Cita: React.FC<{t: string}> = ({t}) => (
+export const Cita: React.FC<{t: string}> = ({t}) => (
 	<AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', padding: '0 70px 330px', textAlign: 'center'}}>
 		<div style={{fontFamily: FUENTE, fontWeight: 800, fontSize: 64, lineHeight: 1.12, color: 'white', background: 'rgba(14,22,82,0.72)', padding: '24px 34px', borderRadius: 20}}>«{t}»</div>
 	</AbsoluteFill>
 );
 
-const Check: React.FC<{texto: string}> = ({texto}) => (
+export const Check: React.FC<{texto: string}> = ({texto}) => (
 	<div style={{display: 'flex', alignItems: 'center', gap: 26, marginTop: 28}}>
 		<svg width="58" height="58" viewBox="0 0 58 58">
 			<circle cx="29" cy="29" r="29" fill={DORADO} />
@@ -117,10 +117,10 @@ export const Reel15: React.FC = () => (
 );
 
 /* ───────── Utilidades de carrusel ───────── */
-const Foto: React.FC<{src: string; pos?: string}> = ({src, pos = 'center'}) => (
+export const Foto: React.FC<{src: string; pos?: string}> = ({src, pos = 'center'}) => (
 	<Img src={staticFile(src)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: pos}} />
 );
-const Portada1: React.FC<{img: string; pos?: string; etiqueta: string; titulo: string; sub: string; n: number; refer?: boolean}> = ({img, pos, etiqueta, titulo, sub, n, refer}) => (
+export const Portada1: React.FC<{img: string; pos?: string; etiqueta: string; titulo: string; sub: string; n: number; refer?: boolean}> = ({img, pos, etiqueta, titulo, sub, n, refer}) => (
 	<AbsoluteFill>
 		<Foto src={img} pos={pos} />
 		<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(14,22,82,0.1) 20%, rgba(14,22,82,0.94) 80%)'}} />
@@ -133,7 +133,7 @@ const Portada1: React.FC<{img: string; pos?: string; etiqueta: string; titulo: s
 		<Pie n={1} total={n} claro />
 	</AbsoluteFill>
 );
-const Lamina: React.FC<{img: string; pos?: string; t: string; d: string; n: number; total: number; refer?: boolean}> = ({img, pos, t, d, n, total, refer}) => (
+export const Lamina: React.FC<{img: string; pos?: string; t: string; d: string; n: number; total: number; refer?: boolean}> = ({img, pos, t, d, n, total, refer}) => (
 	<AbsoluteFill>
 		<Foto src={img} pos={pos} />
 		<AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(14,22,82,0) 55%, rgba(14,22,82,0.92) 100%)'}} />
@@ -270,7 +270,7 @@ export const Carrusel15: React.FC = () => {
 };
 
 /* ───────── HISTORIAS ───────── */
-const CtaH: React.FC<{t: string; sub: string}> = ({t, sub}) => (
+export const CtaH: React.FC<{t: string; sub: string}> = ({t, sub}) => (
 	<AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 260, textAlign: 'center'}}>
 		<Texto size={100}>{t}</Texto>
 		<Texto size={46} peso={600} color={CREMA} retraso={10} style={{marginTop: 18}}>{sub}</Texto>

@@ -9,6 +9,7 @@ import {Carrusel2, Carrusel3, DUR_REEL2, DUR_REEL3, Historia1, Historia3, N_CARR
 import {Carrusel7, Carrusel8, Carrusel9, DUR_REEL7, DUR_REEL8, DUR_REEL9, Historia7, Historia8, Historia9, N_CARRUSEL7, N_CARRUSEL8, N_CARRUSEL9, Reel7, Reel8, Reel9} from './Semana3';
 import {Carrusel10, Carrusel11, Carrusel12, DUR_REEL10, DUR_REEL11, DUR_REEL12, Historia10, Historia11, Historia12, N_CARRUSEL10, N_CARRUSEL11, N_CARRUSEL12, Reel10, Reel11, Reel12} from './Semana4';
 import {Carrusel13, Carrusel14, Carrusel15, DUR_REEL13, DUR_REEL14, DUR_REEL15, Historia13, Historia14, Historia15, N_CARRUSEL13, N_CARRUSEL14, N_CARRUSEL15, Reel13, Reel14, Reel15} from './Semana5';
+import {Carrusel16, Carrusel17, Carrusel18, DUR_REEL16, DUR_REEL17, DUR_REEL18, Historia16, Historia17, Historia18, N_CARRUSEL16, N_CARRUSEL17, N_CARRUSEL18, Reel16, Reel17, Reel18} from './Semana6';
 
 const V = {fps: 30, width: 1080, height: 1920};
 const C = {fps: 30, width: 1080, height: 1350};
@@ -60,6 +61,15 @@ const Root: React.FC = () => (
 		<Composition id="Reel15" component={Reel15} durationInFrames={DUR_REEL15} {...V} />
 		<Composition id="Carrusel15" component={Carrusel15} durationInFrames={N_CARRUSEL15} {...C} />
 		<Composition id="Historia15" component={Historia15} durationInFrames={1} {...V} />
+		<Composition id="Reel16" component={Reel16} durationInFrames={DUR_REEL16} {...V} />
+		<Composition id="Carrusel16" component={Carrusel16} durationInFrames={N_CARRUSEL16} {...C} />
+		<Composition id="Historia16" component={Historia16} durationInFrames={300} {...V} />
+		<Composition id="Reel17" component={Reel17} durationInFrames={DUR_REEL17} {...V} />
+		<Composition id="Carrusel17" component={Carrusel17} durationInFrames={N_CARRUSEL17} {...C} />
+		<Composition id="Historia17" component={Historia17} durationInFrames={300} {...V} />
+		<Composition id="Reel18" component={Reel18} durationInFrames={DUR_REEL18} {...V} />
+		<Composition id="Carrusel18" component={Carrusel18} durationInFrames={N_CARRUSEL18} {...C} />
+		<Composition id="Historia18" component={Historia18} durationInFrames={1} {...V} />
 	</>
 );
 
